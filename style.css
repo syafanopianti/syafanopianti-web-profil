@@ -1,0 +1,828 @@
+@import url(';https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color:rgba(0, 0, 0);
+    color: mintcream;
+}
+
+/*Navigation*/
+.logo {
+    color: mintcream;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 1px solid rgba(255, 68, 0, 0);
+}
+
+nav ul li a:hover {
+    color: hotpink;
+    border-bottom: 3px solid hotpink;
+}
+
+/* Default tampilan desktop */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 0 2rem;
+  background-color: rgb(0, 0, 0);
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+nav ul.active{
+  left:0;
+}
+
+.menu-toggle{
+  display: none;
+  font-size: 1.5rem;
+  color: pointer;
+}
+
+/*Home*/
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  background-color: black;
+  margin-bottom: 20%;
+}
+
+.home .home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+span {
+  color: deeppink;
+  margin-left: 10px;
+}
+
+.home-content h3{
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.home-img {
+  border-radius: 50%;
+}
+
+.home-img img {
+  position: relative;
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px solid pink;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.home-img img:hover {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.social-icons a {
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid pink;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: rgb(0, 0, 0);
+  transform: scale(1.3) translateY(-5px);
+  background-color: lightpink;
+  box-shadow: 0 0 25px lightpink;
+}
+
+.typing-text {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.typing-text span {
+  position: relative;
+}
+
+.typing-text span::before {
+  content: "Newbie Developer";
+  color: pink;
+  animation: words 10s infinite;
+}
+
+.typing-text span::after{
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid black;
+  right: -8;
+}
+
+@keyframes words {
+  0%, 20%{
+    content: "Student";
+  }
+  21%, 40%{
+    content: "Newbie Developer";
+  }
+  41%, 60%{
+    content: "Student";
+  }
+}
+
+@media (max-width: 1000px){
+  .home{
+    gap: 4rem;
+  }
+}
+
+@media (max-width:995px){
+  .home{
+    flex-direction: column;
+    margin: 5rem 4rem;
+  }
+}
+
+.home .home-content h3{
+  font-size: 2.5rem;
+}
+
+.home .home-content h1{
+  font-size: 5rem;
+}
+
+.home-img img{
+  margin-top: 4rem;
+}
+
+/*About*/
+.about-section {
+    padding: 0 150px;
+    text-align: left;
+    margin-bottom: 20%;
+}
+
+.about-title {
+    color: lightpink;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: left;
+    margin-bottom: 8px;
+    margin-left: -100px;
+}
+
+.about-title::after {
+    content: "";
+    display: inline-block;
+  width: 300px; /* panjang garis */
+    height: 2px;
+    background-color: #ccc;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.paraf {
+    max-width: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    margin-left: 30px;
+    margin-top: -20px;
+    font-family: 'Segoe UI';
+    font-size: 20px;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-top: auto;
+    margin-left: -100px;
+}
+
+.info-section {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    margin-left: 7%;
+}
+
+.info-section p {
+    font-size: 1rem;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+  color: hotpink; /* warna hijau seperti di gambar */
+    margin-left: -30px;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+strong {
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+/*Education*/
+.edu-title {
+    color: pink;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: left;
+    margin-bottom: 8px;
+    margin-left: 70px;
+}
+
+.edu-title::after {
+    content: "";
+    display: inline-block;
+  width: 300px; /* panjang garis */
+    height: 2px;
+    background-color: #ccc;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.container {
+  justify-content: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 93%;
+  margin-bottom: 20%;
+  margin-left: 60px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 3px;
+  height: 90%;
+  background-color: pink;
+}
+
+.course {
+  display: flex;
+  align-items: center;
+  background-color: #f3f3ff;
+  border-radius: 12px;
+  margin: 20px 0;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.course-pink {
+  background-color: #ffe6f5;
+}
+
+.course-red {
+  background-color: #ffeaea;
+}
+
+.course-blue {
+  background-color: #eef0ff;
+}
+
+.circle {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid pink;
+  background-color: white;
+}
+
+.circle.filled {
+  background-color: pink;
+}
+
+.content {
+  margin-left: 40px;
+  flex-grow: 1;
+}
+
+.content h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.content p {
+  margin: 3px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/*Experience*/
+.edu-title {
+    color: pink;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: left;
+    margin-bottom: 8px;
+    margin-left: 70px;
+}
+
+.edu-title::after {
+    content: "";
+    display: inline-block;
+  width: 300px; /* panjang garis */
+    height: 2px;
+    background-color: #ccc;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.container {
+  justify-content: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 93%;
+  margin-bottom: 20%;
+  margin-left: 60px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 3px;
+  height: 90%;
+  background-color: pink;
+}
+
+.course {
+  display: flex;
+  align-items: center;
+  background-color: #f3f3ff;
+  border-radius: 12px;
+  margin: 20px 0;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.course-pink {
+  background-color: #ffe6f5;
+}
+
+.course-red {
+  background-color: #ffeaea;
+}
+
+.course-blue {
+  background-color: #eef0ff;
+}
+
+.circle {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid pink;
+  background-color: white;
+}
+
+.circle.filled {
+  background-color: pink;
+}
+
+.content {
+  margin-left: 40px;
+  flex-grow: 1;
+}
+
+.content h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.content p {
+  margin: 3px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/*Projects*/
+.edu-title {
+    color: pink;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: left;
+    margin-bottom: 8px;
+    margin-left: 70px;
+}
+
+.edu-title::after {
+    content: "";
+    display: inline-block;
+  width: 300px; /* panjang garis */
+    height: 2px;
+    background-color: #ccc;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.container {
+  justify-content: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 93%;
+  margin-bottom: 20%;
+  margin-left: 60px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 3px;
+  height: 90%;
+  background-color: pink;
+}
+
+.course {
+  display: flex;
+  align-items: center;
+  background-color: #f3f3ff;
+  border-radius: 12px;
+  margin: 20px 0;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.course-pink {
+  background-color: #ffe6f5;
+}
+
+.course-red {
+  background-color: #ffeaea;
+}
+
+.course-blue {
+  background-color: #eef0ff;
+}
+
+.circle {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid pink;
+  background-color: white;
+}
+
+.circle.filled {
+  background-color: pink;
+}
+
+.content {
+  margin-left: 40px;
+  flex-grow: 1;
+}
+
+.content h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.content p {
+  margin: 3px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+
+/*Skills*/
+.skills-section {
+    max-width: 92%;
+    margin: auto;
+    margin-bottom: 20%;
+}
+
+.skills-section h2 {
+    letter-spacing: 3px;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-left: 10px;
+}
+
+.skills-box {
+    background-color: #0c1b2a;
+    border: 2px solid hsl(212, 34%, 54%);
+    border-radius: 10px;
+    padding: 20px 40px;
+    margin-top: 30px;
+}
+
+.skills-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: hotpink;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.icons img {
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.icons img:hover {
+    transform: scale(1.1);
+}
+
+
+/*Contact*/
+#contact {
+  padding: 60px 80px;
+}
+
+.contact-title {
+    color: pink;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: left;
+    margin-bottom: 8px;
+}
+   
+
+.contact-title::after {
+    content: "";
+    display: inline-block;
+  width: 300px; /* panjang garis */
+    height: 2px;
+    background-color: #ccc;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.contact-box {
+  background-color: #132639;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: 0.3s;
+}
+
+.contact-box:hover {
+  background-color: #1a324a;
+}
+
+.icon-contact {
+  background-color: #24384d;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-left: 1px;
+}
+
+.info h3 {
+  color: hotpink;
+  margin-bottom: 10px;
+}
+
+.social-icons-contact a {
+  color: white;
+  margin-right: 15px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.social-icons-contact a:hover {
+  color: pink;
+}
+
+body{
+    background-color: black;
+}
+
+.logo {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 1px solid rgba(255, 68, 0, 0);
+}
+
+nav ul li a:hover {
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+/* Default tampilan desktop */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 0 2rem;
+  background-color: rgb(0, 0, 0);
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+nav ul.active{
+  left:0;
+}
+
+.menu-toggle{
+  display: none;
+  font-size: 1.5rem;
+  color: pointer;
+}
+
+
+.heading-porto {
+  text-align: left;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #000000;
+}
+
+.card-body p {
+  margin: 0;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.4;
+}
